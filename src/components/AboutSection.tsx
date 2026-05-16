@@ -109,14 +109,14 @@ export default function AboutSection() {
         </motion.div>
 
         {/* Main card */}
-        <div ref={ref} style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
+        <div ref={ref} className="flex flex-col md:grid md:grid-cols-2 gap-5">
           {/* Bio */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
-            className="glass glass-reflection"
-            style={{ padding: 36, gridColumn: "1 / 2", gridRow: "1 / 2" }}
+            className="glass glass-reflection md:col-span-1 md:row-span-1 order-1"
+            style={{ padding: 36 }}
           >
             <h3 style={{ fontSize: 18, fontWeight: 600, color: "rgba(255,255,255,0.90)", marginBottom: 16, letterSpacing: "-0.02em" }}>
               Who I Am
@@ -143,8 +143,8 @@ export default function AboutSection() {
             initial={{ opacity: 0, y: 40 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.15, ease: [0.23, 1, 0.32, 1] }}
-            className="glass glass-reflection"
-            style={{ padding: 36, gridColumn: "2 / 3", gridRow: "1 / 3" }}
+            className="glass glass-reflection md:col-start-2 md:row-span-2 order-3 md:order-none"
+            style={{ padding: 36 }}
           >
             <h3 style={{ fontSize: 18, fontWeight: 600, color: "rgba(255,255,255,0.90)", marginBottom: 28, letterSpacing: "-0.02em" }}>
               Experience Timeline
@@ -161,10 +161,7 @@ export default function AboutSection() {
             initial={{ opacity: 0, y: 40 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.25, ease: [0.23, 1, 0.32, 1] }}
-            style={{
-              gridColumn: "1 / 2", gridRow: "2 / 3",
-              display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12,
-            }}
+            className="grid grid-cols-2 gap-3 md:col-start-1 md:row-start-2 order-2 md:order-none"
           >
             {stats.map(({ icon, value, label }, i) => (
               <motion.div

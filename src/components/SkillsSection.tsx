@@ -105,14 +105,9 @@ export default function SkillsSection() {
           </h2>
         </motion.div>
 
-        {/* Grid */}
         <div
           ref={ref}
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))",
-            gap: 16,
-          }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"
         >
           {skillGroups.map((group, gi) => (
             <motion.div

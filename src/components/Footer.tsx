@@ -48,15 +48,10 @@ export default function Footer() {
         <div className="glass-divider" style={{ marginBottom: 32 }} />
 
         <div
-          className="glass glass-reflection"
+          className="glass glass-reflection flex flex-col md:flex-row items-center justify-between gap-6 md:gap-4"
           style={{
             padding: "24px 32px",
             borderRadius: 24,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            flexWrap: "wrap",
-            gap: 16,
           }}
         >
           {/* Logo */}

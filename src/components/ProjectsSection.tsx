@@ -104,9 +104,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
       initial={{ opacity: 0, y: 40 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.7, delay: index * 0.08, ease: [0.23, 1, 0.32, 1] }}
-      style={{
-        gridColumn: isLarge ? "span 2" : "span 1",
-      }}
+      className={isLarge ? "col-span-1 md:col-span-2" : "col-span-1"}
     >
       <motion.div
         onMouseEnter={() => setHovered(true)}
@@ -286,12 +284,7 @@ export default function ProjectsSection() {
         </motion.div>
 
         {/* Bento Grid */}
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(2, 1fr)",
-          gap: 16,
-          gridAutoRows: "auto",
-        }}>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 auto-rows-auto">
           {projects.map((project, i) => (
             <ProjectCard key={project.title} project={project} index={i} />
           ))}

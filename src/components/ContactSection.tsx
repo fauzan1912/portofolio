@@ -76,11 +76,7 @@ export default function ContactSection() {
 
         <div
           ref={ref}
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-            gap: 20,
-          }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-5"
         >
           {/* Left – Info */}
           <motion.div
