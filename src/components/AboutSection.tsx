@@ -122,7 +122,7 @@ export default function AboutSection() {
               Who I Am
             </h3>
             <p style={{ fontSize: 14, color: "rgba(255,255,255,0.50)", lineHeight: 1.8, marginBottom: 20 }}>
-              I'm a Fullstack Developer and System Engineer based in Yogyakarta, Indonesia.
+              I&apos;m a Fullstack Developer and System Engineer based in Yogyakarta, Indonesia.
               I specialize in building robust, scalable web systems — from hospital information
               platforms to smart IoT devices.
             </p>
